@@ -32,6 +32,15 @@ Each step is isolated to ensure reliability, maintainability, and easy extensibi
 
 ---
 
+## Failure Handling
+
+- Each pipeline stage is isolated, allowing failures to be identified and debugged independently.
+- Raw data is preserved to ensure reprocessing is possible without re-crawling websites.
+- The Airflow DAG includes retry logic to handle transient failures during execution.
+- Metadata such as crawl timestamps and HTTP status codes help with monitoring and validation.
+
+---
+
 ## Orchestration
 
 An **Apache Airflow DAG** is included to demonstrate:
